@@ -29,6 +29,7 @@ int main() {
 	}
 	cout << endl;
 	Graph G1 = Graph(Matrix);
+
 	G1.print_graph();
 	cout << endl << endl;
 	G1.add_bidirectional(0, 100, 45);
@@ -39,5 +40,13 @@ int main() {
 	G1.print_graph();
 	G1.remove_bidirectional( 0, 100);
 	G1.print_graph();
+
+	G1.remove_bidirectional( 0, 45);
+	G1.add_unidirectional(5, 3, 13);
+	G1.print_graph();
+	G1.print_graph();
+	G1.remove_bidirectional( 0, 100);
+	G1.print_graph();
+
 	return 0;
 }
